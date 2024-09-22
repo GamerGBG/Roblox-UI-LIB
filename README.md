@@ -4,9 +4,9 @@ This script provides a customizable UI library for Roblox exploit development. T
 
 ## How to Use
 
-1. **Window Creation**
+1. **UI**
    To use the Lib, you need to use
-   ```lua
+   ```
    https://raw.githubusercontent.com/GamerGBG/Roblox-UI-LIB/refs/heads/main/UI-LIB.lua?token=GHSAT0AAAAAACVXFDHT6VB23MUARIOYQVO2ZXP5ZXQ
    ```
 
