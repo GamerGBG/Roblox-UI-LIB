@@ -5,6 +5,12 @@ This script provides a customizable UI library for Roblox exploit development. T
 ## How to Use
 
 1. **Window Creation**
+   To use the Lib, you need to use
+   ```lua
+   https://raw.githubusercontent.com/GamerGBG/Roblox-UI-LIB/refs/heads/main/UI-LIB.lua?token=GHSAT0AAAAAACVXFDHT6VB23MUARIOYQVO2ZXP5ZXQ
+   ```
+
+1. **Window Creation**
    To create a window, call the `Library:Window("Title")` function. This will spawn a new window with the specified title.
    ```lua
    local Window = Library:Window("My Window")
@@ -53,6 +59,27 @@ This script provides a customizable UI library for Roblox exploit development. T
 ## Example Usage
 
 ```lua
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerGBG/Roblox-UI-LIB/refs/heads/main/UI-LIB.lua?token=GHSAT0AAAAAACVXFDHT6VB23MUARIOYQVO2ZXP5ZXQ",true))()
+local Window = Library:Window("My Cool Exploit")
+local MainTab = Window:Tab("Main")
+local SettingsTab = Window:Tab("Settings")
+
+MainTab:Button("Print Hello", function()
+    print("Hello World!")
+end)
+
+SettingsTab:Toggle("Enable God Mode", function(state)
+    if state then
+        print("God Mode Activated")
+    else
+        print("God Mode Deactivated")
+    end
+end)
+
+SettingsTab:Slider("Speed", 0, 100, 50, function(value)
+    print("Speed set to", value)
+end)
+
 local Window = Library:Window("My Cool Exploit")
 local MainTab = Window:Tab("Main")
 local SettingsTab = Window:Tab("Settings")
@@ -73,8 +100,3 @@ SettingsTab:Slider("Speed", 0, 100, 50, function(value)
     print("Speed set to", value)
 end)
 ```
-
-## Requirements
-
-- Place this script in the Roblox exploit environment. The script must be executed within Roblox's game context.
-- Make sure the UI library (provided separately) is loaded correctly before using this script.
