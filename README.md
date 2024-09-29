@@ -4,8 +4,8 @@ This script provides a customizable UI library for Roblox exploit development. T
 
 ## How to Use
 
-0. **UI**
-   For the Lib to work you need to use this
+   **UI**
+    For the Lib to work you need to use this
    ```lua
    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerGBG/Roblox-UI-LIB/refs/heads/main/UI-LIB.lua",true))()
    ```
