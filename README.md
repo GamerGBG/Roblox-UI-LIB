@@ -59,7 +59,7 @@ This script provides a customizable UI library for Roblox exploit development. T
 ## Example Usage
 
 ```lua
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerGBG/Roblox-UI-LIB/refs/heads/main/UI-LIB.lua?token=GHSAT0AAAAAACVXFDHT6VB23MUARIOYQVO2ZXP5ZXQ",true))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerGBG/Roblox-UI-LIB/refs/heads/main/UI-LIB.lua?token=GHSAT0AAAAAACYBAFLGGRZOFZG7NGASLMBIZXZCOSA",true))()
 local Window = Library:Window("My Cool Exploit")
 local MainTab = Window:Tab("Main")
 local SettingsTab = Window:Tab("Settings")
