@@ -4,10 +4,10 @@ This script provides a customizable UI library for Roblox exploit development. T
 
 ## How to Use
 
-1. **UI**
-   To use the Lib, you need to use
-   ```
-   https://raw.githubusercontent.com/GamerGBG/Roblox-UI-LIB/refs/heads/main/UI-LIB.lua?token=GHSAT0AAAAAACVXFDHT6VB23MUARIOYQVO2ZXP5ZXQ
+0. **UI**
+   For the Lib to work you need to use this
+   ```lua
+   local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerGBG/Roblox-UI-LIB/refs/heads/main/UI-LIB.lua",true))()
    ```
 
 1. **Window Creation**
@@ -59,27 +59,7 @@ This script provides a customizable UI library for Roblox exploit development. T
 ## Example Usage
 
 ```lua
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerGBG/Roblox-UI-LIB/refs/heads/main/UI-LIB.lua?token=GHSAT0AAAAAACYBAFLGGRZOFZG7NGASLMBIZXZCOSA",true))()
-local Window = Library:Window("My Cool Exploit")
-local MainTab = Window:Tab("Main")
-local SettingsTab = Window:Tab("Settings")
-
-MainTab:Button("Print Hello", function()
-    print("Hello World!")
-end)
-
-SettingsTab:Toggle("Enable God Mode", function(state)
-    if state then
-        print("God Mode Activated")
-    else
-        print("God Mode Deactivated")
-    end
-end)
-
-SettingsTab:Slider("Speed", 0, 100, 50, function(value)
-    print("Speed set to", value)
-end)
-
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerGBG/Roblox-UI-LIB/refs/heads/main/UI-LIB.lua",true))()
 local Window = Library:Window("My Cool Exploit")
 local MainTab = Window:Tab("Main")
 local SettingsTab = Window:Tab("Settings")
