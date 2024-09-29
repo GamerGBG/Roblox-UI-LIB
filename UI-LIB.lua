@@ -70,7 +70,7 @@ function Library:Window(title)
 
 	Mini.Name = "Mini"
 	Mini.Parent = Top
-	Mini.BackgroundColor3 = Color3.fromRGB(0, 255, 128)
+	Mini.BackgroundColor3 = Color3.fromRGB(100, 0, 100)
 	Mini.ClipsDescendants = true
 	Mini.Position = UDim2.new(0.933179677, 0, 0.137931034, 0)
 	Mini.Size = UDim2.new(0, 21, 0, 19)
@@ -84,11 +84,11 @@ function Library:Window(title)
 	UICorner_9.Parent = Mini
 
 	Mini.MouseButton1Click:Connect(function()
-		if Mini.BackgroundColor3 == Color3.fromRGB(0, 255, 128) then
-			game:GetService("TweenService"):Create(Mini, TweenInfo.new(0.35), {BackgroundColor3 = Color3.fromRGB(255, 0, 102)}):Play()
+		if Mini.BackgroundColor3 == Color3.fromRGB(100, 0, 100) then
+			game:GetService("TweenService"):Create(Mini, TweenInfo.new(0.35), {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
 			Main:TweenSize(UDim2.new(0, 389,0, 0), "Out", "Quad", 0.4, true)
 		else
-			game:GetService("TweenService"):Create(Mini, TweenInfo.new(0.35), {BackgroundColor3 = Color3.fromRGB(0, 255, 128)}):Play()
+			game:GetService("TweenService"):Create(Mini, TweenInfo.new(0.35), {BackgroundColor3 = Color3.fromRGB(100, 0, 100)}):Play()
 			Main:TweenSize(UDim2.new(0, 389,0, 234), "Out", "Quad", 0.4, true)
 		end
 	end)
@@ -147,7 +147,7 @@ function Library:Window(title)
 
 		TabButton.Name = "TabButton"
 		TabButton.Parent = TabHolder
-		TabButton.BackgroundColor3 = Library.TabCount == 0 and Color3.fromRGB(125, 60, 152) or Color3.fromRGB(40, 40, 40)
+		TabButton.BackgroundColor3 = Library.TabCount == 0 and Color3.fromRGB(0, 0, 0) or Color3.fromRGB(40, 40, 40)
 		TabButton.BorderSizePixel = 0
 		TabButton.ClipsDescendants = true
 		TabButton.Position = UDim2.new(0.0357142873, 0, 0.024630541, 0)
@@ -189,8 +189,8 @@ function Library:Window(title)
 		Container.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Container.BackgroundTransparency = 1.000
 		Container.Size = UDim2.new(0, 267, 0, 227)
-		Container.CanvasSize = UDim2.new(0, 0, 6, 0)
-		Container.ScrollBarThickness = 0
+		Container.CanvasSize = UDim2.new(0, 0, 1, 0)
+		Container.ScrollBarThickness = 5
 
 		UIListLayout_2.Parent = Container
 		UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -214,7 +214,7 @@ function Library:Window(title)
 					v.TabName.TextColor3 = Color3.fromRGB(255, 255, 255)
 				end
 			end
-			TabButton.BackgroundColor3 = Color3.fromRGB(125, 60, 152)
+			TabButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 			TabName.TextColor3 = Color3.fromRGB(255, 255, 255)
 		end)
 
@@ -340,7 +340,7 @@ function Library:Window(title)
 
 			Toggle.MouseButton1Click:Connect(function()
 				if ToggleLogo.BackgroundColor3 == Color3.fromRGB(255, 255, 255) then
-					game:GetService("TweenService"):Create(ToggleLogo, TweenInfo.new(0.25), {BackgroundColor3 = Color3.fromRGB(125, 60, 152)}):Play()
+					game:GetService("TweenService"):Create(ToggleLogo, TweenInfo.new(0.25), {BackgroundColor3 = Color3.fromRGB(0, 0, 0)}):Play()
 					callback(true)
 				else
 					game:GetService("TweenService"):Create(ToggleLogo, TweenInfo.new(0.25), {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
@@ -385,7 +385,7 @@ function Library:Window(title)
 
 			Slider.Name = "Slider"
 			Slider.Parent = SliderBack
-			Slider.BackgroundColor3 = Color3.fromRGB(125, 60, 152)
+			Slider.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 			Slider.Size = UDim2.new((start or 0) / max, 0, 1, 0);
 
 			UICorner_6.CornerRadius = UDim.new(0, 3)
