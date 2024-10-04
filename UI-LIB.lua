@@ -86,7 +86,7 @@ function Library:Window(title)
 
 	Mini.MouseButton1Click:Connect(function()
 		if Mini.BackgroundColor3 == Color3.fromRGB(20, 20 ,20) then
-			game:GetService("TweenService"):Create(Mini, TweenInfo.new(0.35), {BackgroundColor3 = Color3.fromRGB(20, 20 ,20)}):Play()
+			game:GetService("TweenService"):Create(Mini, TweenInfo.new(0.35), {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
 			Main:TweenSize(UDim2.new(0, 389,0, 0), "Out", "Quad", 0.4, true)
 		else
 			game:GetService("TweenService"):Create(Mini, TweenInfo.new(0.35), {BackgroundColor3 = Color3.fromRGB(20, 20 ,20)}):Play()
