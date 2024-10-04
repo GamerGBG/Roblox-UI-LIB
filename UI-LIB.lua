@@ -45,11 +45,12 @@ function Library:Window(title)
 	TabHolder.BackgroundTransparency = 1.000
 	TabHolder.Size = UDim2.new(0, 112, 0, 203)
 	TabHolder.ScrollBarThickness = 0
+    TabHolder.ScrollingEnabled = false
 
 	UIListLayout.Parent = TabHolder
 	UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-	UIListLayout.Padding = UDim.new(0, 3)
+	UIListLayout.Padding = UDim.new(0, 5)
 
 	UIPadding.Parent = TabHolder
 	UIPadding.PaddingTop = UDim.new(0, 6)
@@ -70,25 +71,25 @@ function Library:Window(title)
 
 	Mini.Name = "Mini"
 	Mini.Parent = Top
-	Mini.BackgroundColor3 = Color3.fromRGB(100, 0, 100)
+	Mini.BackgroundColor3 = Color3.fromRGB(20, 20 ,20)
 	Mini.ClipsDescendants = true
 	Mini.Position = UDim2.new(0.933179677, 0, 0.137931034, 0)
 	Mini.Size = UDim2.new(0, 21, 0, 19)
 	Mini.ZIndex = 2
 	Mini.Font = Enum.Font.SourceSans
 	Mini.Text = ""
-	Mini.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Mini.TextColor3 = Color3.fromRGB(20, 20 ,20)
 	Mini.TextSize = 14.000
 
-	UICorner_9.CornerRadius = UDim.new(0, 2)
+	UICorner_9.CornerRadius = UDim.new(0, 5)
 	UICorner_9.Parent = Mini
 
 	Mini.MouseButton1Click:Connect(function()
-		if Mini.BackgroundColor3 == Color3.fromRGB(100, 0, 100) then
-			game:GetService("TweenService"):Create(Mini, TweenInfo.new(0.35), {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+		if Mini.BackgroundColor3 == Color3.fromRGB(20, 20 ,20) then
+			game:GetService("TweenService"):Create(Mini, TweenInfo.new(0.35), {BackgroundColor3 = Color3.fromRGB(20, 20 ,20)}):Play()
 			Main:TweenSize(UDim2.new(0, 389,0, 0), "Out", "Quad", 0.4, true)
 		else
-			game:GetService("TweenService"):Create(Mini, TweenInfo.new(0.35), {BackgroundColor3 = Color3.fromRGB(100, 0, 100)}):Play()
+			game:GetService("TweenService"):Create(Mini, TweenInfo.new(0.35), {BackgroundColor3 = Color3.fromRGB(20, 20 ,20)}):Play()
 			Main:TweenSize(UDim2.new(0, 389,0, 234), "Out", "Quad", 0.4, true)
 		end
 	end)
@@ -147,18 +148,18 @@ function Library:Window(title)
 
 		TabButton.Name = "TabButton"
 		TabButton.Parent = TabHolder
-		TabButton.BackgroundColor3 = Library.TabCount == 0 and Color3.fromRGB(0, 0, 0) or Color3.fromRGB(40, 40, 40)
+		TabButton.BackgroundColor3 = Library.TabCount == 0 and Color3.fromRGB(20, 20 ,20) or Color3.fromRGB(40, 40, 40)
 		TabButton.BorderSizePixel = 0
 		TabButton.ClipsDescendants = true
 		TabButton.Position = UDim2.new(0.0357142873, 0, 0.024630541, 0)
-		TabButton.Size = UDim2.new(0, 104, 0, 28)
+		TabButton.Size = UDim2.new(0, 100, 0, 30)
 		TabButton.AutoButtonColor = false
 		TabButton.Font = Enum.Font.SourceSans
 		TabButton.Text = ""
 		TabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 		TabButton.TextSize = 14.000
 
-		UICorner.CornerRadius = UDim.new(0, 1)
+		UICorner.CornerRadius = UDim.new(0, 5)
 		UICorner.Parent = TabButton
 
 		TabName.Name = "TabName"
@@ -190,7 +191,8 @@ function Library:Window(title)
 		Container.BackgroundTransparency = 1.000
 		Container.Size = UDim2.new(0, 267, 0, 227)
 		Container.CanvasSize = UDim2.new(0, 0, 1, 0)
-		Container.ScrollBarThickness = 5
+		Container.ScrollBarThickness = 0
+        TabHolder.ScrollingEnabled = false
 
 		UIListLayout_2.Parent = Container
 		UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -214,7 +216,7 @@ function Library:Window(title)
 					v.TabName.TextColor3 = Color3.fromRGB(255, 255, 255)
 				end
 			end
-			TabButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			TabButton.BackgroundColor3 = Color3.fromRGB(20, 20 ,20)
 			TabName.TextColor3 = Color3.fromRGB(255, 255, 255)
 		end)
 
@@ -236,13 +238,13 @@ function Library:Window(title)
 			Button.Size = UDim2.new(0, 248, 0, 28)
 			Button.Font = Enum.Font.SourceSans
 			Button.Text = ""
-			Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+			Button.TextColor3 = Color3.fromRGB(20, 20 ,20)
 			Button.TextSize = 14.000
 			Button.MouseButton1Click:Connect(function()
 				callback()
 			end)
 
-			UICorner_2.CornerRadius = UDim.new(0, 3)
+			UICorner_2.CornerRadius = UDim.new(0, 5)
 			UICorner_2.Parent = Button
 
 			ButtonName.Name = "ButtonName"
@@ -300,7 +302,7 @@ function Library:Window(title)
 			ToggleBack.Position = UDim2.new(-0.228464425, 0, 0.017676767, 0)
 			ToggleBack.Size = UDim2.new(0, 248, 0, 28)
 
-			UICorner_3.CornerRadius = UDim.new(0, 3)
+			UICorner_3.CornerRadius = UDim.new(0, 5)
 			UICorner_3.Parent = ToggleBack
 
 			Toggle.Name = "Toggle"
@@ -312,7 +314,7 @@ function Library:Window(title)
 			Toggle.ZIndex = 2
 			Toggle.Font = Enum.Font.SourceSans
 			Toggle.Text = ""
-			Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+			Toggle.TextColor3 = Color3.fromRGB(20, 20 ,20)
 			Toggle.TextSize = 14.000
 
 			ToggleLogo.Name = "ToggleLogo"
@@ -321,7 +323,7 @@ function Library:Window(title)
 			ToggleLogo.Position = UDim2.new(0.0282258056, 0, 0.178571433, 0)
 			ToggleLogo.Size = UDim2.new(0, 20, 0, 17)
 
-			UICorner_4.CornerRadius = UDim.new(0, 3)
+			UICorner_4.CornerRadius = UDim.new(0, 5)
 			UICorner_4.Parent = ToggleLogo
 
 			ToggleName.Name = "ToggleName"
@@ -340,7 +342,7 @@ function Library:Window(title)
 
 			Toggle.MouseButton1Click:Connect(function()
 				if ToggleLogo.BackgroundColor3 == Color3.fromRGB(255, 255, 255) then
-					game:GetService("TweenService"):Create(ToggleLogo, TweenInfo.new(0.25), {BackgroundColor3 = Color3.fromRGB(0, 0, 0)}):Play()
+					game:GetService("TweenService"):Create(ToggleLogo, TweenInfo.new(0.25), {BackgroundColor3 = Color3.fromRGB(20, 20 ,20)}):Play()
 					callback(true)
 				else
 					game:GetService("TweenService"):Create(ToggleLogo, TweenInfo.new(0.25), {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
@@ -365,7 +367,7 @@ function Library:Window(title)
 			SliderBack.Size = UDim2.new(0, 248, 0, 28)
 			SliderBack.ClipsDescendants = true
 
-			UICorner_5.CornerRadius = UDim.new(0, 3)
+			UICorner_5.CornerRadius = UDim.new(0, 5)
 			UICorner_5.Parent = SliderBack
 
 			SliderName.Name = "SliderName"
@@ -385,10 +387,10 @@ function Library:Window(title)
 
 			Slider.Name = "Slider"
 			Slider.Parent = SliderBack
-			Slider.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			Slider.BackgroundColor3 = Color3.fromRGB(20, 20 ,20)
 			Slider.Size = UDim2.new((start or 0) / max, 0, 1, 0);
 
-			UICorner_6.CornerRadius = UDim.new(0, 3)
+			UICorner_6.CornerRadius = UDim.new(0, 5)
 			UICorner_6.Parent = Slider
 
 			SliderValue.Name = "SliderValue"
@@ -464,10 +466,10 @@ function Library:Window(title)
 				callback(Box.Text)
 			end)
 
-			UICorner_7.CornerRadius = UDim.new(0, 3)
+			UICorner_7.CornerRadius = UDim.new(0, 5)
 			UICorner_7.Parent = Box
 
-			UICorner_8.CornerRadius = UDim.new(0, 3)
+			UICorner_8.CornerRadius = UDim.new(0, 5)
 			UICorner_8.Parent = BoxBack
 
 			BoxName.Name = "BoxName"
